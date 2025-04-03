@@ -10,18 +10,32 @@ export class CRUD{
     }
 
     async insertar(sentenciaSQL:String){
-        (await this.conexion).run(`${sentenciaSQL}`)
+        try{
+            (await this.conexion).run(`${sentenciaSQL}`)
+        }catch(e){
+            throw e
+        }
     }
 
     async lerUnhaFila(sentenciaSQL:String):Promise<Object>{
-        let dato = (await this.conexion).get(`${sentenciaSQL}`)
-        console.log("dato en funcion ler ",await dato)
-        return await dato
+        try{
+            let dato = (await this.conexion).get(`${sentenciaSQL}`)
+            console.log("dato en funcion ler ",await dato)
+            return await dato
+        }catch(e){
+            throw e
+        }
+        
     }
 
     async lerTodasAsFilas(sentenciaSQL:String):Promise<Object>{
-        let datos = (await this.conexion).all(`${sentenciaSQL}`)
-        return await datos
+        try{
+            let datos = (await this.conexion).all(`${sentenciaSQL}`)
+            return await datos
+        }catch(e){
+            throw e
+        }
+        
     }
     
 }
