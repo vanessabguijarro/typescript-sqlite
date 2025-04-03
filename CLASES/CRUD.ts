@@ -1,7 +1,9 @@
 import { Database } from "sqlite";
 
 export class CRUD{
+    
     private conexion: Promise<Database>;
+
     constructor(conexion:Promise<Database>){
         
         this.conexion = conexion;

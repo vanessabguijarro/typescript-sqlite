@@ -1,6 +1,7 @@
 import { InfoBBDD } from "../Interfaces/InfoBBDD";
 import  sqlite3 from "sqlite3";
 import { open, Database } from "sqlite";
+
 export class CreoBBDD{
     private basedatos:String;
     private rutaBBDD: String;

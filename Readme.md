@@ -10,4 +10,4 @@ Isto pretende ser un exemplo de cómo utilizar clases con métodos asíncronos. 
 - Na carpeta `CLASES` contén dous arquivos
 - Na carpeta `Interfaces` contén unha interface
 
-Dende o `index.ts` lanzamos as sentencias
+Dende o `index.ts` lanzamos as sentencias.
